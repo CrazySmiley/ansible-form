@@ -6,7 +6,7 @@
         state: present
     - name: Webapps
       ansible.builtin.get_url:
-        url: https://github.com/CrazySmiley/ansible-form/blob/main/sample.war
+        url: https://github.com/downloads/CrazySmiley/ansible-form/sample.war
         dest: /var/lib/tomcat9/webapps/sample.war
         mode: '0444'
 
