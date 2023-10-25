@@ -8,9 +8,6 @@
       ansible.builtin.get_url:
         url: https://github.com/CrazySmiley/ansible-form/blob/main/sample.war
         dest: /var/lib/tomcat9/webapps/sample.war
-        mode: '0440'
-    - service:
-        name: tomcat9
-        state: restarted
-        enabled: true
+        mode: '0444'
+
       
