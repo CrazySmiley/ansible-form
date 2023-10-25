@@ -5,9 +5,10 @@
           - tomcat9
         state: present
     - name: Webapps
-      ansible.builtin.get_url:
-        url: https://github.com/CrazySmiley/ansible-form/raw/main/sample.war
+      ansible.builtin.copy:
+        src: sample.war
         dest: /var/lib/tomcat9/webapps/sample.war
-        mode: '0444'
+        mode: '0644'
+
 
       
