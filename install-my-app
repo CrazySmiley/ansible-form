@@ -1,0 +1,25 @@
+- hosts: all
+  tasks:
+    - package:
+        name:
+          - python3-flask
+        state: present
+    - file:
+        path: /home/vagrant/my-app
+        state: directory
+        mode: '0755
+    - copy:
+        src: my-app/app.py
+        dest: /home/vagrant/my-app/
+        owner: vagrant
+        mode: '0644'
+    - copy:
+        src: my-app.service
+        dest: /etc/systemd/system/
+        mode: '0644'
+    - systemd:
+        daemon_reload: true
+    - service:
+        name: my-app
+        state: started
+        enabled: true
