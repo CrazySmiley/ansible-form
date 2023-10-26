@@ -5,7 +5,10 @@
           - docker
           - python3-docker
         state: present
-        
+    - name: Pull an image
+      community.docker.docker_image:
+      name: ghost
+      source: pull    
     - name: Create a data container
       community.docker.docker_container:
         name: docker_img
