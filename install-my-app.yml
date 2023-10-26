@@ -7,7 +7,7 @@
     - file:
         path: /home/vagrant/my-app
         state: directory
-        mode: '0755
+        mode: '0755'
     - copy:
         src: my-app/app.py
         dest: /home/vagrant/my-app/
