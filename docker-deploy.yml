@@ -12,6 +12,5 @@
     - name: Create a data container
       community.docker.docker_container:
         name: docker_img
-        source: pull
         image: ghost
         state: started
