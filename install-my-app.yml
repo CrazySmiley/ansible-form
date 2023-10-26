@@ -11,7 +11,6 @@
     - copy:
         src: my-app/app.py
         dest: /home/vagrant/my-app/
-        owner: vagrant
         mode: '0644'
     - copy:
         src: my-app.service
