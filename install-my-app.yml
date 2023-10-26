@@ -12,8 +12,8 @@
         src: my-app/app.py
         dest: /home/vagrant/my-app/
         mode: '0644'
-        notify:
-          - Restart flask
+      notify:
+        - Restart flask
     - copy:
         src: my-app.service
         dest: /etc/systemd/system/
