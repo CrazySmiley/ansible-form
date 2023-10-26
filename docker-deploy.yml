@@ -31,3 +31,5 @@
         name: docker_img
         image: ghost
         state: started
+        ports:
+          - "3001:2368"
