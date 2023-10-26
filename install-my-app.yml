@@ -8,7 +8,7 @@
         path: /home/vagrant/my-app
         state: directory
         mode: '0755'
-    - copy:
+    - template:
         src: my-app/app.py
         dest: /home/vagrant/my-app/
         mode: '0644'
