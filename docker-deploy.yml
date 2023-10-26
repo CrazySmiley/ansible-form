@@ -4,7 +4,8 @@
         name:
           - docker
         state: present
+        
     - name: Create a data container
-      docker_container:
+      community.general.docker_container:
         name: docker_img
         image: https://hub.docker.com/_/ghost/
