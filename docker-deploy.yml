@@ -2,7 +2,7 @@
   tasks:
     - package:
         name:
-          - tomcat9
+          - docker
         state: present
     - name: Create a data container
       docker_container:
