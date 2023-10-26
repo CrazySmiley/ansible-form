@@ -4,5 +4,5 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "<p>New, version 2.0!</p>"
+    return "<p>Hello, {{ tower_user_name }}</p>"
 
