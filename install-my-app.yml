@@ -12,6 +12,8 @@
         src: my-app/app.py
         dest: /home/vagrant/my-app/
         mode: '0644'
+        notify:
+          - Restart flask
     - copy:
         src: my-app.service
         dest: /etc/systemd/system/
@@ -22,3 +24,9 @@
         name: my-app
         state: started
         enabled: true
+  handlers:
+    - name: Restart flask
+      service:
+        name: my-app
+        state: restarted
+        
